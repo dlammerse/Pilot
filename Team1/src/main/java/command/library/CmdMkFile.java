@@ -21,8 +21,10 @@ class CmdMkFile extends Command {
 	@Override
 	public void execute(IOutputter outputter) {
 		String fileName = this.getParameterAt(0);
-		String fileContent = "";
-		if(this.getParameterCount() > 1 ){
+		String fileContent;
+		if(this.getParameterCount() == 1 ){
+            fileContent = "";
+        } else {
             fileContent = this.getParameterAt(1);
         }
 		File newFile = new File(fileName, fileContent);
