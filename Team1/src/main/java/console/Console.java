@@ -54,5 +54,7 @@ public class Console {
 		}
 		this.outputter.printLine("\nGoodbye!");
 		this.drive.save();
+
+		System.exit(1);
 	}
 }
